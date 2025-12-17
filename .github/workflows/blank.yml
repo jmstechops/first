@@ -22,7 +22,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
@@ -40,6 +41,8 @@ jobs:
         run: python --version
       - name: docker version
         run: docker -v
+      - name: terraform version checking
+        run: terraform version
       - name: aws cli chekcing
         run: aws version 
         
