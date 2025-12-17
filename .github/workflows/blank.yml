@@ -44,6 +44,6 @@ jobs:
       - name: terraform version checking
         run: terraform version
       - name: aws cli chekcing
-        run: aws version 
+        run: aws --version 
         
 
